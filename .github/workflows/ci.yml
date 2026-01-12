@@ -2,9 +2,9 @@ name: ci
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [main, develop]
   pull_request:
-    branches: [ main, develop ]
+    branches: [main, develop]
 
 jobs:
   # ─────────────────────────────────────────────────────────────────────────
@@ -32,14 +32,6 @@ jobs:
             cc: gcc-14
             cxx: g++-14
             install: gcc-14 g++-14
-          - compiler: clang-16
-            cc: clang-16
-            cxx: clang++-16
-            install: clang-16 libc++-16-dev libc++abi-16-dev
-          - compiler: clang-17
-            cc: clang-17
-            cxx: clang++-17
-            install: clang-17 libc++-17-dev libc++abi-17-dev
           - compiler: clang-18
             cc: clang-18
             cxx: clang++-18
@@ -124,7 +116,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-13, macos-14]
+        os: [macos-14]
 
     steps:
       - name: Checkout
