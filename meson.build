@@ -18,6 +18,7 @@ if cpp.get_id() in ['clang', 'appleclang']
   endif
   add_project_arguments(
     '-U_LIBCPP_ENABLE_ASSERTIONS',
+    '-U_LIBCPP_HARDENING_MODE',
     '-D_LIBCPP_HARDENING_MODE=' + hardening_mode,
     language: 'cpp',
   )
