@@ -28,7 +28,7 @@ concept ArgsChecker = std::constructible_from<CheckerClass, args_key_value_t_>;
 
 template <typename HelperClass>
 concept ArgsHelper =
-    std::constructible_from<HelperClass, std::string, std::array<int, 3>>;
+    std::constructible_from<HelperClass, std::string, std::array<int, 4>>;
 
 template <typename CheckerClass, typename HelperClass = bool>
   requires ArgsChecker<CheckerClass> &&
@@ -38,7 +38,7 @@ class sequencer {
 
   // MARK (sequencer) private types declaration.
   using skip_digit_check_list_t_ = std::unordered_set<std::string>;
-  using version_t_ = std::array<int, 3>;
+  using version_t_ = std::array<int, 4>;
   using args_key_value_t_ =
       std::variant<std::string, unsigned long long, bool, std::nullptr_t>;
 
@@ -101,7 +101,7 @@ private:
   std::string value_;
   std::string key_;
   std::string arg_;
-  std::array<int, 3> version_{};
+  std::array<int, 4> version_{};
 
   void parse_(int argc, char *argv[]);
 

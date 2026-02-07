@@ -20,7 +20,7 @@ sequencer<CheckerClass, HelperClass>::sequencer(int argc, char *argv[],
                                       const skip_digit_check_t &skip_digit_check,
                                       const version_opt_t &version) {
 
-  version_ = version.value_or(version_t_{0, 0, 1});
+  version_ = version.value_or(version_t_{0, 0, 1, 0});
   skip_digit_check_ = skip_digit_check.value_or(skip_digit_check_list_t_{});
   std::exception_ptr thread_exception = nullptr;
 
