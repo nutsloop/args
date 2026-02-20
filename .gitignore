@@ -1,0 +1,14 @@
+# OS artifacts
+.DS_Store
+
+# Local caches
+/.cache/
+
+# IDEs and editors
+/.idea/
+/.vscode/
+/.zed/
+
+# Build outputs
+/build/
+
